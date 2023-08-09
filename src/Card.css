@@ -13,14 +13,23 @@ h1{
 
 p{
      font-size: 15px;
-     color: hsl(217, 12%, 63%);
+     color: hsl(216, 12%, 54%);
 }
 
 .form{
      display: flex;
      flex-flow: column;
      gap: 20px;
-} img{
+} .imgContainer{
+     background-color: hsl(213, 18%, 26%);
+     width: 50px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 100%;
+} 
+img{
      width: 15px;
 }
 
@@ -28,4 +37,30 @@ p{
      width: 100%;
      display: flex;
      justify-content: space-between;
+} .buttonsContainer button {
+     background-color: hsl(213, 18%, 26%);
+     width: 50px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 100%;
+     border: none;
+     color: hsl(216, 12%, 54%);
+}.buttonsContainer button:hover{
+     background-color: hsl(25, 97%, 53%);
+     color: white;     
+} button{
+     height: 40px;
+     background-color: hsl(25, 97%, 53%);
+     color: white;
+     border: none;
+     border-radius: 25px;
+} button:hover{
+     background-color: white;
+     color: hsl(25, 97%, 53%);
+     cursor: pointer;
+} .selected{
+     background-color: hsl(217, 12%, 63%)!important;
+     color: white!important;
 }

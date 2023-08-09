@@ -9,15 +9,15 @@ export default function Card(){
 
      const clicked = (e) => {
           console.log(e.target.value)
-          e.target.className = "puntuationButton selected";
           setSelected(e.target.value)
      }
 
      const PuntuationButtons = () => {
      return (
           puntuation.map((puntuation) => {
+               const className = selected == puntuation ? "puntuationButton selected" : "puntuationButton";
                return (
-                    <button key={puntuation} value={puntuation} className="puntuationButton" onClick={clicked}>{puntuation}</button>
+                    <button key={puntuation} value={puntuation} className={className} onClick={clicked}>{puntuation}</button>
                )
           })
      )
