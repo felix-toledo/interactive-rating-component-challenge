@@ -15,7 +15,7 @@ function App() {
   return (
     <>
     {
-      actualComponent == 0 ? (<Card changeComponent={changeComponent} punctuationValue={selected}/>) : (<ThankYou puntuation={selected}/>)
+      actualComponent == 0 ? (<Card changeComponent={changeComponent} punctuationValue={selected}/>) : (<ThankYou punctuation={selected}/>)
     }
       
     </>
