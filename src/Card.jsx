@@ -2,10 +2,10 @@ import './Card.css'
 import {useState} from 'react';
 
 export default function Card({changeComponent, punctuationValue}){
-     const puntuation = [1,2,3,4,5];
+     const punctuation = [1,2,3,4,5];
      const [selected, setSelected] = useState(0);
 
-     const formSubmited = () => {
+     const punctSubmitted = () => {
           changeComponent(selected);
      }
 
@@ -14,12 +14,12 @@ export default function Card({changeComponent, punctuationValue}){
           e.target.value == selected ? setSelected(0) : setSelected(e.target.value)
      }
 
-     const PuntuationButtons = () => {
+     const PunctuationButtons = () => {
      return (
-          puntuation.map((puntuation) => {
-               const className = selected == puntuation ? "puntuationButton selected" : "puntuationButton";
+          punctuation.map((punctuation) => {
+               const className = selected == punctuation ? "punctuationButton selected" : "punctuationButton";
                return (
-                    <button key={puntuation} value={puntuation} className={className} onClick={clicked}>{puntuation}</button>
+                    <button key={punctuation} value={punctuation} className={className} onClick={clicked}>{punctuation}</button>
                )
           })
      )
@@ -35,8 +35,8 @@ export default function Card({changeComponent, punctuationValue}){
                <h1>How did we do?</h1>
                <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
                </div>
-               <div className="buttonsContainer"><PuntuationButtons/></div>
-               <button onClick={formSubmited} className='submitButton'>SUBMIT</button>
+               <div className="buttonsContainer"><PunctuationButtons/></div>
+               <button onClick={punctSubmitted} className='submitButton'>SUBMIT</button>
           </form>
      </div>
      )
