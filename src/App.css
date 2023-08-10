@@ -15,3 +15,11 @@ body{
   justify-content: center;
   align-items: center;
 }
+.cardContainer{
+  background-color: hsl(213, 19%, 18%);
+  padding: 15px;
+  width: 360px;
+  margin: auto;
+  border-radius: 15px;
+  color: white;
+}

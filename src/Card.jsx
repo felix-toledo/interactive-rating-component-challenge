@@ -1,15 +1,17 @@
 import './Card.css'
 import {useState} from 'react';
 
-
-export default function Card(){
+export default function Card({changeComponent, punctuationValue}){
      const puntuation = [1,2,3,4,5];
      const [selected, setSelected] = useState(0);
 
+     const formSubmited = () => {
+          changeComponent(selected);
+     }
 
      const clicked = (e) => {
           console.log(e.target.value)
-          setSelected(e.target.value)
+          e.target.value == selected ? setSelected(0) : setSelected(e.target.value)
      }
 
      const PuntuationButtons = () => {
@@ -21,6 +23,8 @@ export default function Card(){
                )
           })
      )
+
+     
 }
 
      return (
@@ -32,7 +36,7 @@ export default function Card(){
                <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
                </div>
                <div className="buttonsContainer"><PuntuationButtons/></div>
-               <button type='submit' className='submitButton'>SUBMIT</button>
+               <button onClick={formSubmited} className='submitButton'>SUBMIT</button>
           </form>
      </div>
      )

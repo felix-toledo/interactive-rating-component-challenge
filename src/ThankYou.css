@@ -1,0 +1,22 @@
+.byeContainer{
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     gap: 10px;
+}
+
+span{
+     background-color: hsl(213, 18%, 26%);
+     padding: 6px;
+     font-size: 15px;
+     color: hsl(25, 86%, 62%);
+     border-radius: 20px;
+}
+
+.tyImgContainer{
+     width: 50%;
+} .tyImgContainer img{
+     width: 100%;
+}
