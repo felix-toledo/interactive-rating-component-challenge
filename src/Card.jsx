@@ -30,7 +30,7 @@ export default function Card({changeComponent, punctuationValue}){
      return (
      <div className="cardContainer">
           <form className="form">
-               <div className="imgContainer"><img src="../dist/icon-star.svg" alt='star'></img></div>
+               <div className="imgContainer"><img src="../images/icon-star.svg" alt='star'></img></div>
                <div className='text'>
                <h1>How did we do?</h1>
                <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
